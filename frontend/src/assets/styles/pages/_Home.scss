@@ -1,0 +1,101 @@
+.home {
+    font-family: "montserrat", sans-serif;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 100%, rgba(255, 255, 255, 0.15) 80%),
+        url("../../imgs/home2.png");
+    background-position: 60% rem(9px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 99%;
+    display: block;
+    padding: 1.5rem;
+    overflow-y: hidden;
+    background-color: #1a1a1a;
+    color: #fff;
+    flex-grow: 1;
+    margin-top: 5px;
+
+    @include for-tablet-layout {
+        background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 15%, rgba(255, 255, 255, 0.15) 80%),
+            url("../../imgs/home2.png");
+        background-position: 50% rem(9px);
+        height: 104%;
+        overflow-y: auto;
+    }
+}
+
+.home-txt-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    z-index: 2;
+    border-radius: 1.25rem;
+    height: 90vh;
+    justify-content: center;
+
+    @include for-tablet-layout {
+        align-items: flex-start;
+        margin-top: 9vh;
+        margin-left: 6%;
+        align-self: flex-start;
+        position: relative;
+        height: unset;
+    }
+}
+
+.home-btn {
+    font-size: rem(30px);
+}
+
+.home-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: rem(16px);
+}
+
+.home-txt {
+    font-size: rem(22px);
+    font-weight: 100;
+    margin-bottom: rem(16px);
+    max-width: rem(450px);
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 8px;
+
+    @include for-tablet-layout {
+        text-align: left;
+    }
+}
+
+.home-link {
+    background-color: #44c767;
+    border-radius: rem(28px);
+    border: rem(1px) solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    padding: rem(16px) rem(31px);
+    text-decoration: none;
+    text-shadow: 0px rem(1px) 0px #2f6627;
+    font-size: rem(20px);
+    font-weight: 600;
+}
+
+.home-link:hover {
+    background-color: #5cbf2a;
+    text-decoration: none;
+}
+
+.home-link:active {
+    position: relative;
+    top: rem(1px);
+}
+
+.logo-home {
+    width: 85vw;
+    margin-bottom: rem(10px);
+    @include for-tablet-layout {
+        width: rem(400px);
+        margin-bottom: 0px;
+    }
+}

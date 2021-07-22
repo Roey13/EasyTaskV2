@@ -1,0 +1,207 @@
+.edit-labels-container {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    width: -webkit-fill-available;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: rem(3px);
+    padding: rem(10px);
+    box-shadow: 0 rem(8px) rem(16px) rem(-4px) rgba(9, 30, 66, 0.25), 0 0 0 rem(1px) rgba(9, 30, 66, 0.08);
+    text-decoration: none;
+    left: 0;
+
+    @include for-tablet-layout {
+        left: rem(120px);
+        width: rem(270px);
+    }
+
+    .edit-labels-header {
+        width: 100%;
+        display: flex;
+        border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+        justify-content: space-around;
+        padding-block: rem(5px);
+        align-items: center;
+        .title {
+            line-height: 0.9;
+            flex-grow: 1;
+            color: #243757;
+            font-size: 1.2rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .close-edit-labels-btn {
+            margin: 0;
+            padding: 0;
+            color: #233655;
+            background-color: transparent;
+            border: none;
+            height: rem(32px);
+            width: rem(32px);
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    .label-preview {
+        display: flex;
+        &:first-child {
+            margin-top: rem(5px);
+        }
+        .label-title {
+            color: #fff6f6;
+            margin: 0px rem(5px) rem(5px) rem(5px);
+            width: rem(244px);
+            height: rem(32px);
+            padding: rem(6px) rem(12px);
+            min-height: rem(20px);
+            border-radius: rem(3px);
+            align-content: center;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns:auto rem(50px);
+            svg {
+                align-self: center;
+                justify-self: flex-end;
+                grid-column: 2/3;
+            }
+        }
+        .open-edit-label-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 rem(4px);
+            width: rem(32px);
+            height:rem(32px);
+            background-color: transparent;
+            padding: rem(6px);
+            border-radius: rem(3px);
+            cursor: pointer;
+            border: none;
+            &:hover {
+               
+                background-color: rgba(92, 107, 117, 0.212);
+            }
+        }
+    }
+    .create-label-btn {
+        color: #233655;
+        background-color: transparent;
+        border: none;
+        padding: rem(8px);
+        font-size: 1.1rem;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            background-color: rgba(92, 107, 117, 0.212);
+        }
+    }
+}
+
+.edit-label-container {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #243757;
+    border-radius: rem(3px);
+    padding: rem(10px);
+    box-shadow: 0 rem(8px) rem(16px) rem(-4px) rgba(9, 30, 66, 0.25), 0 0 0 rem(1px) rgba(9, 30, 66, 0.08);
+    text-decoration: none;
+    width: rem(300px);
+    top: 15vh;
+    align-self: center;
+
+
+    @include for-tablet-layout {
+        left: rem(120px);
+        width: rem(300px);
+        top: unset;
+        align-self: unset;
+    }
+
+    .edit-label-header {
+        width: 100%;
+        display: flex;
+        border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+        justify-content: space-around;
+        padding-block: rem(5px);
+        align-items: center;
+        .title {
+            line-height: 0.9;
+            flex-grow: 1;
+            color: #243757;
+            font-size: 1.2rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .close-edit-label-btn {
+            margin: 0;
+            padding: 0;
+            color: #233655;
+            background-color: transparent;
+            border: none;
+            height: rem(32px);
+            width: rem(32px);
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    .edit-label-form {
+        margin-left: rem(4px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include for-tablet-layout {
+            display: unset;
+        }
+
+        .edit-label-colors-pick {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .color {
+                margin: 0px rem(8px) rem(8px) 0px;
+                width: rem(48px);
+                height: rem(32px);
+                border-radius: rem(3px);
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.5;
+                }
+                &:nth-child(5n+5) {
+                    margin-right: rem(4px);
+                }
+            }
+        }
+        .edit-label-controls {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+
+            @include for-tablet-layout {
+                justify-content: space-between;
+            }
+
+            > * {
+                border-radius: rem(3px);
+                color: #fff;
+                height: rem(32px);
+                padding: rem(6px);
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+            .confirm-btn {
+                background-color: #5aac44;
+            }
+            .delete-btn {
+                margin-right: rem(4px);
+                background-color: #eb5a46;
+            }
+        }
+    }
+}

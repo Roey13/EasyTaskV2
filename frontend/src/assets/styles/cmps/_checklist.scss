@@ -1,0 +1,65 @@
+        .checklists {
+            margin: rem(20px) 0 rem(20px) 0;
+            .container {
+                width: 96%;
+                justify-content: space-between;
+                align-content: center;
+                button {
+                    margin: 0;
+                }
+            }
+            .todos {
+                margin-left: rem(5px);
+                p {
+                    margin: rem(10px) 0 rem(5px) 0;
+                    font-size: rem(14px);
+                    line-height: rem(20px);
+                    font-weight: 400;
+                }
+            }
+            .title {
+                h3 {
+                    margin: 0;
+                }
+                .icon {
+                    margin-right: rem(5px);
+                }
+            }
+            .checkbox {
+                width: rem(20px);
+                margin-right: rem(5px);
+                svg {
+                    height: rem(20px);
+                    width: rem(20px);
+                    color: #0079bf;
+                }
+            }
+            .todo {
+                margin-left: rem(2px);
+                &:hover {
+                    .title-input {
+                        background-color: rgba(9, 30, 66, .04);
+                    }
+                }
+                .title-input {
+                    font-size: rem(14px);
+                    line-height: rem(20px);
+                    font-weight: 400;
+                    margin: 0;
+                    text-decoration: line-through;
+                }
+            }
+            button {
+                color: #172b4d;
+                font-size: rem(14px);
+                line-height: rem(20px);
+                font-weight: 400;
+                align-items: center;
+                justify-content: center;
+                border-radius: rem(3px);
+                cursor: pointer;
+                padding: rem(6px) rem(12px);
+                margin: rem(5px) 0 rem(20px) rem(30px);
+                background-color: rgba(9, 30, 66, .04);
+            }
+        }

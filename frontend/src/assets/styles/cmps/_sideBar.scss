@@ -1,0 +1,213 @@
+.side-bar-window {
+    position: fixed;
+    background-color: #00000088;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 98;
+}
+.side-bar {
+    padding: 0px rem(25px) rem(25px) rem(25px);
+    background-color: #f4f5f7;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    z-index: 99;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: rem(10px);
+
+    @include for-tablet-layout {
+        width: rem(305px);
+        z-index: 99;
+        top: 0;
+        margin-top: 0px
+    }
+
+    .side-bar-header {
+        width: 100%;
+        display: flex;
+        border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+        justify-content: space-around;
+        padding-block: rem(10px);
+        align-items: baseline;
+        .title {
+            line-height: 0.9;
+            flex-grow: 1;
+            color: #243757;
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .close-change-bg-btn {
+            color: #233655;
+            background-color: transparent;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+            margin: 0;
+        }
+        .close-side-bar-btn {
+            margin: 0;
+            padding: 0;
+            color: #233655;
+            background-color: transparent;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    .side-bar-main {
+        width: 100%;
+        .change-bg-btn-container {
+            border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+            display: flex;
+            margin-bottom: rem(10px);
+            width: 100%;
+            .change-bg-btn {
+                border-radius: rem(3px);
+                border: none;
+                outline: none;
+                color: #172b4d;
+                height: rem(30px);
+                margin: rem(8px) 0;
+                padding: rem(2px) rem(10px);
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-color: rgba(34, 34, 34, 0.11);
+                font-family: "montserrat", sans-serif;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba(34, 34, 34, 0.205);
+                }
+            }
+        }
+        .activities-title {
+            font-size: rem(18px);
+            font-weight: 350;
+        }
+        .activities-list {
+            color: #172b4d;
+            overflow-y: auto;
+            height: 76vh;
+            margin-bottom: rem(50px);
+            
+            &::-webkit-scrollbar {
+                width:rem(6px);
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: rem(3px);
+                box-shadow: inset 0 0 rem(6px) #00000046;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: rem(3px);
+                background: rgba(9, 30, 66, 0.041);
+            }
+            &::-webkit-scrollbar-track-piece {
+                border-radius: rem(3px);
+                background: rgba(190, 194, 205, 0.548);
+            }
+            .activity-preview {
+                display: flex;
+                .avatar {
+                    height: rem(28px);
+                    width: rem(28px);
+                    margin: 0 rem(20px) 0 0;
+                    color: #fff;
+                    font-size: rem(16px);
+                    font-weight: 500;
+                    background-color: #3f72af;
+                }
+                .activity-txt {
+                    flex-grow: 1;
+                    font-size: rem(14px);
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    bottom: rem(3px);
+
+                    .at {
+                        font-size: rem(12px);
+                    }
+                }
+            }
+        }
+    }
+    .change-bg-options {
+        display: flex;
+        width: 100%;
+        color: #172b4d;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+
+        @include for-tablet-layout {
+            height: initial;
+            flex-direction: row;
+        }
+
+        .photos-option {
+            margin-top: rem(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .photos-btn {
+                background-color: #dfe1e6;
+                background-size: cover;
+                border-radius: rem(8px);
+                height: 30vh;
+                margin-bottom: rem(8px);
+                width: 85vw;
+                margin-right: rem(10px);
+                cursor: pointer;
+                background-image: url(../../imgs/photosPreview.jpg);
+
+                @include for-tablet-layout {
+                    height: rem(80px);
+                    width: rem(130px);
+                }
+            }
+            .title {
+                font-size: rem(16px);
+                font-weight: 350;
+            }
+        }
+        .colors-option {
+            margin-top: (10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .colors-btn {
+                background-color: #dfe1e6;
+                background-size: cover;
+                border-radius: rem(8px);
+                height: 30vh;
+                margin-bottom: rem(8px);
+                width: 85vw;
+                cursor: pointer;
+                background-image: url(../../imgs/colorsPreview.png);
+
+                @include for-tablet-layout {
+                    height: rem(80px);
+                    width: rem(130px);
+                }
+
+            }
+            .title {
+                font-size: rem(16px);
+                font-weight: 350;
+            }
+        }
+    }
+}

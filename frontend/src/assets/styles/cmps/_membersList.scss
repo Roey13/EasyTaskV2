@@ -1,0 +1,77 @@
+.edit-members-container {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    width: rem(270px);
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: rem(3px);
+    padding: rem(10px);
+    box-shadow: 0 rem(8px) rem(16px) rem(-4px) rgba(9, 30, 66, 0.25), 0 0 0 rem(1px) rgba(9, 30, 66, 0.08);
+    text-decoration: none;
+
+    @include for-tablet-layout {
+        left: rem(120px);
+    }
+
+    .edit-members-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+        align-items:center ;
+        padding-block: rem(10px);
+        .title {
+            color: #243757;
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+            text-align: center;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+        }
+        .close-edit-members-btn {
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+            color: #233655;
+            background-color: transparent;
+            border: none;
+            width: rem(24px);
+            height: rem(24px);
+            cursor: pointer;
+            outline: none;
+            font-size: 1.5rem;
+        }
+    }
+    .member-preview {
+        border-bottom: rem(0.2px) solid rgba(94, 108, 132, 0.25);
+        display: grid;
+        grid-template-columns: rem(50px) auto auto;
+        align-self: center;
+        padding-block: rem(10px);
+        width: 100%;
+        &:hover {
+            background-color: #ebecf0;
+        }
+        .avatar {
+            align-self: center;
+            justify-items: end;
+            width: rem(28px);
+            height: rem(28px);
+            border-radius: 50%;
+            line-height: rem(28px);
+            margin: rem(1px);
+            font-size: 0.8rem;
+        }
+        .member-name {
+            align-self: center;
+            margin: 0;
+            color: #233655;
+            font-weight: 400;
+        }
+        svg {
+            align-self: center;
+            justify-self: flex-end;
+        }
+    }
+}

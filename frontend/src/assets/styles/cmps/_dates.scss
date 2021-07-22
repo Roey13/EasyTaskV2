@@ -1,0 +1,37 @@
+.dates-form {
+    z-index: 3;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    position: absolute;
+    border-radius: rem(5px);
+    padding: rem(5px);
+    border: rem(0.5px) solid black;
+    flex-direction: column;
+    width: 60vw;
+    align-items: center;
+
+    @include for-tablet-layout {
+        width: unset;
+        align-items: unset;
+    }
+
+    input {
+        background-color: white;
+        padding-bottom: rem(15px);
+        font: revert;
+    }
+    .dates {
+        width: rem(179px);
+        height: rem(120px);
+        margin-right: rem(5px);
+        margin-left: rem(5px);
+    }
+    .cancel-change-date-btn {
+        width: rem(70px);
+        height: rem(15px);
+        align-self: center;
+        background-color: white;
+        color: #243757;
+        margin-bottom: rem(20px);
+    }
+}

@@ -1,0 +1,182 @@
+.group:first-of-type{
+    margin-top: rem(80px);
+
+    @include for-tablet-layout {
+        margin-top: unset;
+        margin-left: rem(6px);
+    }
+}
+
+
+.group {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-inline: rem(3px);
+    background-color: #ebecf0;
+    border-radius: rem(5px);
+    max-height: 100vh;
+    width: 100vw;
+    margin: rem(120px) 0px rem(-50px) 0px;
+
+    @include for-tablet-layout {
+        width: fit-content;
+        margin: unset;
+    }
+
+    .header {
+        padding-block: rem(6px);
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+
+        @include for-tablet-layout {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            justify-content: unset;
+        }
+
+        .title {
+            color: #243757;
+            padding-left: rem(6px);
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .options {
+            justify-self: end;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            background-color: #ebecf0;
+            color: #6d798e;
+            padding: 0px;
+            margin: 0px;
+            border-radius: rem(3px);
+            margin-right: rem(6px);
+            height: fit-content;
+            .group-options-svg{
+                margin-inline: rem(5px);
+                display: flex;
+                height: rem(32px);
+            }
+        }
+        .options:hover {
+            background-color: rgba(136, 148, 182, 0.164);
+            color: #243757;
+        }
+        form {
+            padding: rem(6px) rem(6px);
+            margin:rem(0px);
+            input {
+                outline: none;
+                border: none;
+                border-radius: rem(3px);
+                background-color: #fff;
+                color: #00395aec;
+                box-shadow: inset 0 0 0 rem(2px) #0079bf;
+                margin: 0;
+                width: 100%;
+                padding: rem(4px) rem(3px);
+
+                &::placeholder {
+                    opacity: 1;
+                    color: #00395aec;
+                }
+            }
+        }
+    }
+    .task-list {
+        width: 98%;
+        padding-inline:rem(3px);
+        padding-bottom: 0;
+        max-height: 70vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-inline: rem(3px);
+
+        @include for-tablet-layout {
+            width: rem(265px);
+        }
+
+        &::-webkit-scrollbar {
+            width:rem(6px);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: rem(3px);
+            box-shadow: inset 0 0 rem(6px) #00000046;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: rem(3px);
+            background: rgba(9, 30, 66, 0.041);
+        }
+        &::-webkit-scrollbar-track-piece {
+            border-radius: rem(3px);
+            background: rgba(190, 194, 205, 0.548);
+        }
+        .add-task-form {
+            padding-top: rem(95px);
+            padding-bottom: rem(6px);
+            .task-title-input {
+                font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+                sans-serif;
+                outline: none;
+                border: none;
+                color: #00395aec;
+                box-shadow: 0 rem(1px) 0 #091e4240;
+                border-radius: rem(3px);
+                width: 100%;
+                margin: 0;
+                padding: rem(8px) rem(12px);
+                resize: none;
+            }
+
+            @include for-tablet-layout {
+                padding-top: 0;
+            }
+
+            .add-task-controls {
+                height: rem(32px);
+                margin: rem(8px) 0px 0px 0px;
+                display: flex;
+                .add-task-close-btn {
+                    padding: 0;
+                    margin: 0;
+                    width: rem(32px);
+                    font-size: 1.1rem;
+                    color: #42526ec5;
+                }
+                .add-task-close-btn:hover {
+                    color: #2e3542;
+                }
+                .add-task-add-btn {
+                    background-color: #0079bf;
+                    color: white;
+                    height: rem(32px);
+                    margin: 0px;
+                    border-radius: rem(3px);
+                }
+                .add-task-add-btn:hover {
+                    background-color: #0069a7;
+                }
+            }
+        }
+    }
+    .add-task-toggle-btn {
+        background-color: #ebecf0;
+        color: #6d798e;
+        padding: rem(6px) rem(9px);
+        margin: 0px rem(6px) rem(6px);
+        border-radius: rem(3px);
+        height: rem(35px);
+        text-align: left;
+    }
+    .add-task-toggle-btn:hover {
+        background-color: rgba(136, 148, 182, 0.164);
+        color: #3f465c;
+    }
+   
+}

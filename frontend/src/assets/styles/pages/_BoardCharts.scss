@@ -1,0 +1,52 @@
+.board-charts {
+    background-color: rgba(0, 0, 0, 0.849);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: rem(94px);
+    height: 80%;
+    width: 100%;
+    padding-inline: 100;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% 80%;
+    color: white;
+    .header-title {
+        letter-spacing: rem(1.5px);
+        grid-row: 1/2;
+        grid-column: 1/3;
+        text-align: center;
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+    .chart-container {
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        color: white;
+        height: 100%;
+        .title {
+            margin-bottom: rem(30px);
+            text-align: center;
+            width: 100%;
+            justify-self: start;
+            font-size: 1.1rem;
+        }
+        .chart {
+            height: rem(200px);
+        }
+    }
+
+    .close-chart {
+        grid-row: 3/3;
+        grid-column: 1/3;
+        margin-top: 7vh;
+        width: 30vw;
+        justify-self: center;
+    }
+
+}
