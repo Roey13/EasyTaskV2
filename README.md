@@ -1,1 +1,4 @@
-a production ready server including logger
+# EASYTASK
+A Trello Clone made for my final project at Coding Academy.
+
+![Alt Text](https://roey-barda.netlify.app/images/easytask.jpg)
